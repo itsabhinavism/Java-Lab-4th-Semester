@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class q3 {
 
   public static void main(String[] args) {
-    int dayNumber = 10; // Replace with the actual day number
+    int dayNumber = 10; 
 
     switch (dayNumber % 7) {
       case 1:

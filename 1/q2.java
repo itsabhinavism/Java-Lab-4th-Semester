@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class q2 {
     public static void main(String[] args) {
-        int mark = 85;  // Replace with the actual mark
+        int mark = 85;  
 
         if (mark >= 90) {
             System.out.println("Grade: A+");
