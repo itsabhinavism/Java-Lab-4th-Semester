@@ -16,31 +16,29 @@ class Student {
   }
 }
 
-public class L3P3StudentDetails {
+public class q3 {
 
   public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
 
     System.out.print("Enter the number of students: ");
-    int n = sc.nextInt();
+    int n = scanner.nextInt();
 
     Student[] students = new Student[n];
 
-    // Input details for each student
     for (int i = 0; i < n; i++) {
       System.out.println("\nEnter details for student " + (i + 1) + ":");
       System.out.print("Roll No: ");
-      int rollNo = sc.nextInt();
+      int rollNo = scanner.nextInt();
       System.out.print("Name: ");
-      sc.nextLine(); // Consume newline character
-      String name = sc.nextLine();
+      scanner.nextLine(); // Consume newline character
+      String name = scanner.nextLine();
       System.out.print("CGPA: ");
-      double cgpa = sc.nextDouble();
+      double cgpa = scanner.nextDouble();
 
       students[i] = new Student(rollNo, name, cgpa);
     }
 
-    // Display details of all students
     System.out.println("\nDetails of all students:");
     for (Student student : students) {
       System.out.println("Roll No: " + student.rollNo);
@@ -49,7 +47,6 @@ public class L3P3StudentDetails {
       System.out.println();
     }
 
-    // Find the student with the lowest CGPA
     double lowestCGPA = Double.MAX_VALUE;
     String lowestCGPAStudentName = "";
 
@@ -60,7 +57,6 @@ public class L3P3StudentDetails {
       }
     }
 
-    // Display the name of the student with the lowest CGPA
     System.out.println(
       "Student with the lowest CGPA: " + lowestCGPAStudentName
     );
