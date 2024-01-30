@@ -1,3 +1,5 @@
+//2.Write a program in Java to create a class Rectangle having data members 	length and breadth and three methods called read, calculate and display to read the values of 	length and breadth,  calculate the area and perimeter of the rectangle and display the result  	respectively.
+
 import java.util.Scanner;
 
 class Rectangle {
@@ -29,7 +31,7 @@ class Rectangle {
   }
 }
 
-public class AreaPerimeter {
+public class q2 {
 
   public static void main(String[] args) {
     Rectangle.read();
