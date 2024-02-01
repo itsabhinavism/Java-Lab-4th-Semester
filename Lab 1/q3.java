@@ -1,11 +1,19 @@
+//WAP to print the week day for the given day no. of the current month using switch case statement.
+
 import java.util.Scanner;
 
-public class q3 {
+class weekDay {
 
-  public static void main(String[] args) {
-    int dayNumber = 10; 
-
-    switch (dayNumber % 7) {
+  public static void main(String args[]) {
+    Scanner sc = new Scanner(System.in);
+    int num;
+    System.out.println("Enter week day: ");
+    num = sc.nextInt();
+    int n = num % 7;
+    switch (n) {
+      case 0:
+        System.out.println("Sunday");
+        break;
       case 1:
         System.out.println("Monday");
         break;
@@ -24,11 +32,8 @@ public class q3 {
       case 6:
         System.out.println("Saturday");
         break;
-      case 0:
-        System.out.println("Sunday");
-        break;
       default:
-        System.out.println("Invalid day number");
+        System.out.println("Wrong Input");
         break;
     }
   }

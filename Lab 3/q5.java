@@ -2,63 +2,45 @@ import java.util.Scanner;
 
 class q5 {
 
-  
-  public static void area(double radius) {
-    double circleArea = Math.PI * radius * radius;
-    System.out.println("Area of Circle: " + circleArea);
-  }
-
-  
-  public static void area(double base, double height) {
-    double triangleArea = 0.5 * base * height;
-    System.out.println("Area of Triangle: " + triangleArea);
-  }
-
-  
-  public static void area(double side) {
-    double squareArea = side * side;
-    System.out.println("Area of Square: " + squareArea);
-  }
-}
-
-public class AreaDemo {
-
   public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
 
-    Scanner scanner = new Scanner(System.in);
-
-    // Get user choice
-    System.out.println("Select a shape to find the area:");
-    System.out.println("1. Circle");
-    System.out.println("2. Triangle");
-    System.out.println("3. Square");
-    System.out.print("Enter your choice (1/2/3): ");
-    int choice = scanner.nextInt();
-
+    System.out.println("Choose a shape:\n1. Circle\n2. Triangle\n3. Square");
+    int choice = sc.nextInt();
 
     switch (choice) {
       case 1:
-        System.out.print("Enter the radius of the circle: ");
-        double radius = scanner.nextDouble();
-        AreaCalculator.area(radius);
+        System.out.println("Enter the radius of the circle:");
+        displayArea(area(sc.nextDouble()));
         break;
       case 2:
-        System.out.print("Enter the base of the triangle: ");
-        double base = scanner.nextDouble();
-        System.out.print("Enter the height of the triangle: ");
-        double height = scanner.nextDouble();
-        AreaCalculator.area(base, height);
+        System.out.println("Enter the base of the triangle:");
+        double base = sc.nextDouble();
+        System.out.println("Enter the height of the triangle:");
+        displayArea(area(base, sc.nextDouble()));
         break;
       case 3:
-        System.out.print("Enter the side of the square: ");
-        double side = scanner.nextDouble();
-        AreaCalculator.area(side);
+        System.out.println("Enter the side of the square:");
+        displayArea(area(sc.nextDouble()));
         break;
       default:
-        System.out.println("Invalid choice!");
+        System.out.println("Invalid choice.");
     }
+  }
 
+  static double area(double radius) {
+    return 3.14159 * radius * radius;
+  }
 
-    scanner.close();
+  static double area(double base, double height) {
+    return 0.5 * base * height;
+  }
+
+  static double area(int side) {
+    return side * side;
+  }
+
+  static void displayArea(double area) {
+    System.out.println("Area: " + area);
   }
 }
