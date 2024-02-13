@@ -1,8 +1,8 @@
 //WAP to print the week day for the given day no. of the current month using switch case statement.
 
-import java.util.Scanner;
+import java.util.*;
 
-class weekDay {
+public class q3 {
 ;
   public static void main(String args[]) {
     Scanner sc = new Scanner(System.in);
